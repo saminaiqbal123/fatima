@@ -1,0 +1,238 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Us | Fatima Interior</title>
+    <meta name="description" content="Get in touch with Fatima Interior. Address: 4 Mission Rd, Anarkali Bazar, Lahore. Phone: +92 300 9490734.">
+    
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&family=Playfair+Display:ital,wght@0,500;0,700;1,400&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="css/style.css">
+
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        charcoal: '#1A1D20',
+                        slateDark: '#24282C',
+                        warmGold: '#D4AF37',
+                        goldHover: '#B89628',
+                        offWhite: '#F9F8F6',
+                        softCream: '#F3EFEA'
+                    },
+                    fontFamily: {
+                        serif: ['"Playfair Display"', 'serif'],
+                        sans: ['Montserrat', 'sans-serif']
+                    }
+                }
+            }
+        }
+    </script>
+</head>
+<body class="bg-offWhite text-charcoal font-sans flex flex-col min-h-screen">
+
+    <!-- Sticky Header -->
+    <header class="sticky top-0 z-50 bg-charcoal text-white shadow-xl">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-20 flex items-center justify-between">
+            <a href="index.html" class="flex items-center gap-2 text-2xl font-serif font-bold text-warmGold tracking-wider">
+                <i class="fa-solid fa-couch text-xl"></i> FATIMA INTERIOR
+            </a>
+            
+            <nav class="hidden md:flex space-x-8 font-medium text-sm tracking-wide">
+                <a href="index.html" class="hover:text-warmGold transition">Home</a>
+                <a href="about.html" class="hover:text-warmGold transition">About Us</a>
+                <a href="services.html" class="hover:text-warmGold transition">Services</a>
+                <a href="portfolio.html" class="hover:text-warmGold transition">Portfolio</a>
+                <a href="contact.html" class="text-warmGold font-semibold">Contact Us</a>
+            </nav>
+
+            <div class="hidden md:flex items-center space-x-3">
+                <a href="tel:+923009490734" class="text-xs text-gray-300 hover:text-warmGold"><i class="fa-solid fa-phone text-warmGold mr-1"></i> +92 300 9490734</a>
+                <!-- Header WhatsApp Button -->
+                <a href="https://wa.me/923009490734" target="_blank" class="bg-emerald-600 hover:bg-emerald-700 text-white px-3 py-1.5 rounded text-xs font-semibold flex items-center gap-1.5 transition shadow-sm">
+                    <i class="fa-brands fa-whatsapp text-sm"></i> WhatsApp
+                </a>
+                <a href="contact.html" class="bg-warmGold text-charcoal hover:bg-goldHover px-3 py-1.5 rounded text-xs font-semibold tracking-wider transition">GET A FREE QUOTE</a>
+            </div>
+
+            <button id="mobileMenuBtn" class="md:hidden text-2xl text-warmGold focus:outline-none">
+                <i class="fa-solid fa-bars"></i>
+            </button>
+        </div>
+
+        <div id="mobileMenu" class="hidden md:hidden bg-slateDark border-t border-gray-800 px-4 pt-2 pb-4 space-y-2">
+            <a href="index.html" class="block py-2 text-sm hover:text-warmGold">Home</a>
+            <a href="about.html" class="block py-2 text-sm hover:text-warmGold">About Us</a>
+            <a href="services.html" class="block py-2 text-sm hover:text-warmGold">Services</a>
+            <a href="portfolio.html" class="block py-2 text-sm hover:text-warmGold">Portfolio</a>
+            <a href="contact.html" class="block py-2 text-sm text-warmGold">Contact Us</a>
+            <a href="tel:+923009490734" class="block py-2 text-xs text-warmGold"><i class="fa-solid fa-phone mr-1"></i> +92 300 9490734</a>
+            <a href="https://wa.me/923009490734" target="_blank" class="inline-block bg-emerald-600 text-white px-3 py-1.5 rounded text-xs font-semibold mt-1">
+                <i class="fa-brands fa-whatsapp mr-1"></i> Chat on WhatsApp
+            </a>
+        </div>
+    </header>
+
+    <!-- Main Content -->
+    <main class="flex-grow max-w-7xl mx-auto py-16 px-4 sm:px-6 lg:px-8 w-full">
+        <!-- Hero Title -->
+        <div class="text-center mb-14">
+            <span class="text-warmGold text-xs font-bold tracking-widest uppercase mb-2 block">Let's Connect</span>
+            <h1 class="font-serif text-3xl sm:text-4xl font-bold text-charcoal">Get in Touch with Our Experts</h1>
+            <div class="w-16 h-0.5 bg-warmGold mx-auto mt-4"></div>
+        </div>
+
+        <div class="grid lg:grid-cols-12 gap-12 items-start">
+            <!-- Left Side: Form Card -->
+            <div class="lg:col-span-7 bg-white p-8 sm:p-10 rounded-xl shadow-md border border-gray-100">
+                <h2 class="font-serif text-2xl font-bold mb-2 text-charcoal">Send Us a Message</h2>
+                <p class="text-gray-500 text-xs mb-8">Fill out the form below and our design team will respond within 24 hours.</p>
+
+                <form id="contactForm" class="space-y-5">
+                    <div class="grid sm:grid-cols-2 gap-5">
+                        <div>
+                            <label class="block text-xs font-semibold text-gray-700 mb-1.5">Full Name *</label>
+                            <input type="text" placeholder="John Doe" required class="w-full border border-gray-200 p-3 text-xs sm:text-sm rounded-lg focus:border-warmGold focus:ring-1 focus:ring-warmGold focus:outline-none transition">
+                        </div>
+                        <div>
+                            <label class="block text-xs font-semibold text-gray-700 mb-1.5">Phone Number *</label>
+                            <input type="tel" placeholder="+92 300 0000000" required class="w-full border border-gray-200 p-3 text-xs sm:text-sm rounded-lg focus:border-warmGold focus:ring-1 focus:ring-warmGold focus:outline-none transition">
+                        </div>
+                    </div>
+
+                    <div>
+                        <label class="block text-xs font-semibold text-gray-700 mb-1.5">Service Required</label>
+                        <select class="w-full border border-gray-200 p-3 text-xs sm:text-sm rounded-lg focus:border-warmGold focus:ring-1 focus:ring-warmGold focus:outline-none transition text-gray-700">
+                            <option>Residential Interior Design</option>
+                            <option>Commercial & Retail Architecture</option>
+                            <option>Executive Office Renovation</option>
+                            <option>Architectural Planning</option>
+                            <option>Bespoke Custom Furniture</option>
+                            <option>3D Modeling & Rendering</option>
+                        </select>
+                    </div>
+
+                    <div>
+                        <label class="block text-xs font-semibold text-gray-700 mb-1.5">Message / Project Details</label>
+                        <textarea rows="4" placeholder="Tell us about your space, requirements, or budget..." class="w-full border border-gray-200 p-3 text-xs sm:text-sm rounded-lg focus:border-warmGold focus:ring-1 focus:ring-warmGold focus:outline-none transition"></textarea>
+                    </div>
+
+                    <button type="submit" class="w-full bg-warmGold text-charcoal font-bold py-3.5 rounded-lg hover:bg-goldHover transition text-xs tracking-wider uppercase shadow-md hover:shadow-lg">
+                        Send Message
+                    </button>
+                </form>
+            </div>
+
+            <!-- Right Side: Info & Interactive Options -->
+            <div class="lg:col-span-5 space-y-6">
+                <!-- Direct WhatsApp Banner Card -->
+                <div class="bg-gradient-to-r from-emerald-600 to-teal-700 text-white p-6 rounded-xl shadow-md">
+                    <div class="flex items-center justify-between">
+                        <div>
+                            <span class="text-emerald-100 text-xs font-semibold uppercase tracking-wider block mb-1">Instant Consultation</span>
+                            <h3 class="text-xl font-serif font-bold">Chat via WhatsApp</h3>
+                            <p class="text-xs text-emerald-100 mt-1">Need quick answers? Message us directly.</p>
+                        </div>
+                        <a href="https://wa.me/923009490734" target="_blank" class="bg-white text-emerald-700 hover:bg-emerald-50 px-4 py-2.5 rounded-lg text-xs font-bold transition flex items-center gap-2 shadow-sm whitespace-nowrap">
+                            <i class="fa-brands fa-whatsapp text-base"></i> Chat Now
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Contact Info Card -->
+                <div class="bg-white p-6 sm:p-8 rounded-xl shadow-md border border-gray-100 space-y-6">
+                    <h3 class="font-serif text-xl font-bold text-charcoal border-b border-gray-100 pb-3">Contact Information</h3>
+                    
+                    <div class="space-y-4 text-xs sm:text-sm">
+                        <div class="flex items-start gap-4">
+                            <div class="w-10 h-10 rounded-full bg-softCream text-warmGold flex items-center justify-center shrink-0">
+                                <i class="fa-solid fa-location-dot"></i>
+                            </div>
+                            <div>
+                                <h4 class="font-bold text-charcoal">Address</h4>
+                                <p class="text-gray-600 mt-0.5">4 Mission Rd, Anarkali Bazar, Lahore, 54000, Pakistan</p>
+                            </div>
+                        </div>
+
+                        <div class="flex items-start gap-4">
+                            <div class="w-10 h-10 rounded-full bg-softCream text-warmGold flex items-center justify-center shrink-0">
+                                <i class="fa-solid fa-phone"></i>
+                            </div>
+                            <div>
+                                <h4 class="font-bold text-charcoal">Phone</h4>
+                                <a href="tel:+923009490734" class="text-gray-600 hover:text-warmGold transition block mt-0.5">+92 300 9490734</a>
+                            </div>
+                        </div>
+
+                        <div class="flex items-start gap-4">
+                            <div class="w-10 h-10 rounded-full bg-softCream text-warmGold flex items-center justify-center shrink-0">
+                                <i class="fa-brands fa-facebook-f"></i>
+                            </div>
+                            <div>
+                                <h4 class="font-bold text-charcoal">Social Media</h4>
+                                <a href="http://www.facebook.com/meersinterior" target="_blank" class="text-gray-600 hover:text-warmGold transition block mt-0.5">facebook.com/meersinterior</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Map -->
+                <div class="w-full h-64 bg-gray-200 rounded-xl overflow-hidden shadow-md border border-gray-200">
+                    <iframe title="Fatima Interior Location" class="w-full h-full border-0" src="https://maps.google.com/maps?q=4%20Mission%20Rd,%20Anarkali%20Bazar,%20Lahore&t=&z=15&ie=UTF8&iwloc=&output=embed" allowfullscreen="" loading="lazy"></iframe>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-charcoal text-gray-400 text-xs py-12 border-t border-gray-800">
+        <div class="max-w-7xl mx-auto px-4 grid md:grid-cols-4 gap-8 mb-8">
+            <div>
+                <h4 class="font-serif text-lg font-bold text-warmGold mb-3">FATIMA INTERIOR</h4>
+                <p class="leading-relaxed">Crafting high-end, luxury interior designs and functional architecture across Lahore, Pakistan.</p>
+            </div>
+            <div>
+                <h4 class="font-semibold text-white mb-3">Quick Links</h4>
+                <ul class="space-y-2">
+                    <li><a href="index.html" class="hover:text-warmGold">Home</a></li>
+                    <li><a href="about.html" class="hover:text-warmGold">About Us</a></li>
+                    <li><a href="services.html" class="hover:text-warmGold">Services</a></li>
+                    <li><a href="portfolio.html" class="hover:text-warmGold">Portfolio</a></li>
+                    <li><a href="contact.html" class="hover:text-warmGold">Contact Us</a></li>
+                </ul>
+            </div>
+            <div>
+                <h4 class="font-semibold text-white mb-3">Direct Contact</h4>
+                <p class="mb-2"><i class="fa-solid fa-location-dot text-warmGold mr-1"></i> 4 Mission Rd, Anarkali Bazar, Lahore, 54000</p>
+                <p class="mb-2"><i class="fa-solid fa-phone text-warmGold mr-1"></i> +92 300 9490734</p>
+                <div class="flex items-center gap-2 mt-3">
+                    <a href="https://wa.me/923009490734" target="_blank" class="inline-block bg-emerald-600 text-white px-3 py-1 rounded text-xs font-medium hover:bg-emerald-700 transition">
+                        <i class="fa-brands fa-whatsapp mr-1"></i> WhatsApp
+                    </a>
+                    <a href="http://www.facebook.com/meersinterior" target="_blank" class="inline-block bg-blue-600 text-white px-3 py-1 rounded text-xs font-medium hover:bg-blue-700 transition">
+                        <i class="fa-brands fa-facebook mr-1"></i> Facebook
+                    </a>
+                </div>
+            </div>
+            <div>
+                <h4 class="font-semibold text-white mb-3">Newsletter</h4>
+                <p class="mb-2">Subscribe for latest design trends.</p>
+                <form id="newsletterForm" class="flex">
+                    <input type="email" placeholder="Your Email" required class="p-2 rounded-l w-full text-charcoal focus:outline-none">
+                    <button type="submit" class="bg-warmGold text-charcoal px-3 font-bold rounded-r hover:bg-goldHover">Join</button>
+                </form>
+            </div>
+        </div>
+        <div class="text-center border-t border-gray-800 pt-6">
+            <p>Copyright © 2026 Fatima Interior. All Rights Reserved. | Privacy Policy</p>
+        </div>
+    </footer>
+
+    <script src="js/main.js"></script>
+</body>
+</html>

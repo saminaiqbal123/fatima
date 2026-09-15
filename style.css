@@ -1,0 +1,18 @@
+/* Fatima Interior Custom Styles */
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: 'Montserrat', sans-serif;
+}
+
+h1, h2, h3, h4, .font-serif {
+    font-family: 'Playfair Display', serif;
+}
+
+/* Custom Gallery Filter Styling */
+.gallery-btn.active-btn {
+    background-color: #1A1D20;
+    color: #D4AF37;
+}

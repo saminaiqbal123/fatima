@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Us | Fatima Interior</title>
+    <meta name="description" content="Learn about Fatima Interior, Lahore's leading interior design firm delivering excellence in residential and commercial spaces.">
+    
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600&family=Playfair+Display:ital,wght@0,500;0,700;1,400&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="css/style.css">
+
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        charcoal: '#1A1D20',
+                        slateDark: '#24282C',
+                        warmGold: '#D4AF37',
+                        goldHover: '#B89628',
+                        offWhite: '#F9F8F6',
+                        softCream: '#F3EFEA'
+                    },
+                    fontFamily: {
+                        serif: ['"Playfair Display"', 'serif'],
+                        sans: ['Montserrat', 'sans-serif']
+                    }
+                }
+            }
+        }
+    </script>
+</head>
+<body class="bg-offWhite text-charcoal font-sans flex flex-col min-h-screen">
+
+    <header class="sticky top-0 z-50 bg-charcoal text-white shadow-xl">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-20 flex items-center justify-between">
+            <a href="index.html" class="flex items-center gap-2 text-2xl font-serif font-bold text-warmGold tracking-wider">
+                <i class="fa-solid fa-couch text-xl"></i> FATIMA INTERIOR
+            </a>
+            
+            <nav class="hidden md:flex space-x-8 font-medium text-sm tracking-wide">
+                <a href="index.html" class="hover:text-warmGold transition">Home</a>
+                <a href="about.html" class="text-warmGold font-semibold">About Us</a>
+                <a href="services.html" class="hover:text-warmGold transition">Services</a>
+                <a href="portfolio.html" class="hover:text-warmGold transition">Portfolio</a>
+                <a href="contact.html" class="hover:text-warmGold transition">Contact Us</a>
+            </nav>
+
+            <!-- Header Contact & WhatsApp Button -->
+            <div class="hidden md:flex items-center space-x-4">
+                <a href="tel:+923009490734" class="text-xs text-gray-300 hover:text-warmGold flex items-center gap-1">
+                    <i class="fa-solid fa-phone text-warmGold"></i> +92 300 9490734
+                </a>
+                <a href="https://wa.me/923009490734?text=Hello%20Fatima%20Interior,%20I%20want%20to%20inquire%20about%20your%20services." 
+                   target="_blank" 
+                   rel="noopener noreferrer" 
+                   class="bg-[#25D366] hover:bg-[#1ebd59] text-white px-3 py-2 rounded text-xs font-semibold tracking-wider transition flex items-center gap-2 shadow-md">
+                    <i class="fa-brands fa-whatsapp text-base"></i> WhatsApp
+                </a>
+                <a href="contact.html" class="bg-warmGold text-charcoal hover:bg-goldHover px-4 py-2 rounded text-xs font-semibold tracking-wider transition">GET A FREE QUOTE</a>
+            </div>
+
+            <button id="mobileMenuBtn" class="md:hidden text-2xl text-warmGold focus:outline-none">
+                <i class="fa-solid fa-bars"></i>
+            </button>
+        </div>
+
+        <!-- Mobile Navigation Menu -->
+        <div id="mobileMenu" class="hidden md:hidden bg-slateDark border-t border-gray-800 px-4 pt-2 pb-4 space-y-2">
+            <a href="index.html" class="block py-2 text-sm hover:text-warmGold">Home</a>
+            <a href="about.html" class="block py-2 text-sm text-warmGold">About Us</a>
+            <a href="services.html" class="block py-2 text-sm hover:text-warmGold">Services</a>
+            <a href="portfolio.html" class="block py-2 text-sm hover:text-warmGold">Portfolio</a>
+            <a href="contact.html" class="block py-2 text-sm hover:text-warmGold">Contact Us</a>
+            
+            <div class="pt-2 border-t border-gray-700 flex flex-col gap-2">
+                <a href="tel:+923009490734" class="text-xs text-warmGold flex items-center gap-1">
+                    <i class="fa-solid fa-phone"></i> +92 300 9490734
+                </a>
+                <a href="https://wa.me/923009490734?text=Hello%20Fatima%20Interior,%20I%20want%20to%20inquire%20about%20your%20services." 
+                   target="_blank" 
+                   class="bg-[#25D366] text-white py-2 rounded text-xs text-center font-semibold flex items-center justify-center gap-2">
+                    <i class="fa-brands fa-whatsapp text-sm"></i> WhatsApp Us
+                </a>
+            </div>
+        </div>
+    </header>
+
+    <main class="flex-grow max-w-7xl mx-auto py-16 px-4">
+        <div class="grid md:grid-cols-2 gap-12 items-center">
+            <div>
+                <h1 class="font-serif text-3xl md:text-4xl font-bold text-charcoal mb-6">About Fatima Interior</h1>
+                <p class="text-sm text-gray-700 leading-relaxed mb-4">Founded on principles of elegance, innovation, and precision engineering, Fatima Interior transforms standard spaces into functional masterpieces.</p>
+                <p class="text-sm text-gray-700 leading-relaxed mb-6">Our mission is to bring high-end aesthetic value and optimized space layouts to clients across Lahore and Pakistan, backing every project with dedicated project management and premium material selection.</p>
+                <div class="grid grid-cols-2 gap-4 border-t border-gray-200 pt-6">
+                    <div>
+                        <span class="block font-serif text-2xl font-bold text-warmGold">100+</span>
+                        <span class="text-xs text-gray-600">Completed Projects</span>
+                    </div>
+                    <div>
+                        <span class="block font-serif text-2xl font-bold text-warmGold">100%</span>
+                        <span class="text-xs text-gray-600">Client Satisfaction</span>
+                    </div>
+                </div>
+            </div>
+            <div>
+                <img src="https://images.unsplash.com/photo-1600585154340-be6161a56a0c?q=80&w=800" alt="Fatima Interior Studio Design" class="rounded shadow-lg w-full h-96 object-cover">
+            </div>
+        </div>
+    </main>
+
+    <footer class="bg-charcoal text-gray-400 text-xs py-12 border-t border-gray-800">
+        <div class="max-w-7xl mx-auto px-4 grid md:grid-cols-4 gap-8 mb-8">
+            <div>
+                <h4 class="font-serif text-lg font-bold text-warmGold mb-3">FATIMA INTERIOR</h4>
+                <p class="leading-relaxed">Crafting high-end, luxury interior designs and functional architecture across Lahore, Pakistan.</p>
+            </div>
+            <div>
+                <h4 class="font-semibold text-white mb-3">Quick Links</h4>
+                <ul class="space-y-2">
+                    <li><a href="index.html" class="hover:text-warmGold">Home</a></li>
+                    <li><a href="about.html" class="hover:text-warmGold">About Us</a></li>
+                    <li><a href="services.html" class="hover:text-warmGold">Services</a></li>
+                    <li><a href="portfolio.html" class="hover:text-warmGold">Portfolio</a></li>
+                    <li><a href="contact.html" class="hover:text-warmGold">Contact Us</a></li>
+                </ul>
+            </div>
+            <div>
+                <h4 class="font-semibold text-white mb-3">Direct Contact</h4>
+                <p class="mb-2"><i class="fa-solid fa-location-dot text-warmGold mr-1"></i> 4 Mission Rd, Anarkali Bazar, Lahore, 54000</p>
+                <p class="mb-2"><i class="fa-solid fa-phone text-warmGold mr-1"></i> +92 300 9490734</p>
+                
+                <!-- Footer WhatsApp Button -->
+                <a href="https://wa.me/923009490734?text=Hello%20Fatima%20Interior,%20I%20want%20to%20inquire%20about%20your%20services." 
+                   target="_blank" 
+                   rel="noopener noreferrer" 
+                   class="inline-flex items-center gap-1.5 bg-[#25D366] hover:bg-[#1ebd59] text-white px-3 py-1.5 rounded text-xs mt-1 transition font-medium">
+                    <i class="fa-brands fa-whatsapp text-sm"></i> WhatsApp Us
+                </a>
+
+                <div class="mt-2">
+                    <a href="http://www.facebook.com/meersinterior" target="_blank" class="inline-block bg-blue-600 text-white px-3 py-1 rounded text-xs"><i class="fa-brands fa-facebook mr-1"></i> Facebook</a>
+                </div>
+            </div>
+            <div>
+                <h4 class="font-semibold text-white mb-3">Newsletter</h4>
+                <p class="mb-2">Subscribe for latest design trends.</p>
+                <form id="newsletterForm" class="flex">
+                    <input type="email" placeholder="Your Email" required class="p-2 rounded-l w-full text-charcoal focus:outline-none">
+                    <button type="submit" class="bg-warmGold text-charcoal px-3 font-bold rounded-r hover:bg-goldHover">Join</button>
+                </form>
+            </div>
+        </div>
+        <div class="text-center border-t border-gray-800 pt-6">
+            <p>Copyright © 2026 Fatima Interior. All Rights Reserved. | Privacy Policy</p>
+        </div>
+    </footer>
+
+    <script src="js/main.js"></script>
+</body>
+</html>
