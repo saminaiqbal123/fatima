@@ -30,14 +30,39 @@ document.addEventListener('DOMContentLoaded', function () {
             newsletterForm.reset();
         });
     }
+
+    // Portfolio Filter Setup
+    setupGalleryFilters();
 });
+
+// Portfolio Filter Setup Function
+function setupGalleryFilters() {
+    const buttons = document.querySelectorAll('.gallery-btn');
+    const items = document.querySelectorAll('.gallery-item');
+
+    if (buttons.length === 0) return;
+
+    buttons.forEach(button => {
+        button.addEventListener('click', function () {
+            // 1. تمام بٹنز سے active کلاس ختم کریں
+            buttons.forEach(btn => btn.classList.remove('active'));
+
+            // 2. کلک شدہ بٹن پر active کلاس لگائیں
+            this.classList.add('active');
+
+            // 3. ڈیٹا کیٹیگری یا بٹن کی آن کلک ویلیو سے کیٹیگری حاصل کریں
+            const category = this.getAttribute('data-filter') || this.getAttribute('onclick')?.match(/'([^']+)'/)?.[1] || 'all';
+
+            // 4. گیلری ائٹمز کو فلٹر کریں
+            filterGallery(category);
+        });
+    });
+}
 
 // Portfolio Filter Function
 function filterGallery(category) {
     const items = document.querySelectorAll('.gallery-item');
-    const buttons = document.querySelectorAll('.gallery-btn');
 
-    // Display Items based on category
     items.forEach(item => {
         if (category === 'all' || item.classList.contains(category)) {
             item.style.display = 'block';
