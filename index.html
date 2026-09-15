@@ -23,9 +23,6 @@
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600&family=Playfair+Display:ital,wght@0,500;0,700;1,400&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 
-    <!-- Custom CSS -->
-    <link rel="stylesheet" href="css/style.css">
-
     <script>
         tailwind.config = {
             theme: {
@@ -47,7 +44,7 @@
         }
     </script>
 
-    <!-- Technical SEO: Schema.org JSON-LD for Local Business -->
+    <!-- Schema.org JSON-LD -->
     <script type="application/ld+json">
     {
       "@context": "https://schema.org",
@@ -98,18 +95,18 @@
             </div>
 
             <!-- Mobile menu button -->
-            <button id="mobileMenuBtn" class="md:hidden text-2xl text-warmGold focus:outline-none">
-                <i class="fa-solid fa-bars"></i>
+            <button id="mobileMenuBtn" class="md:hidden text-2xl text-warmGold focus:outline-none p-2">
+                <i id="menuIcon" class="fa-solid fa-bars"></i>
             </button>
         </div>
 
-        <!-- Mobile Navigation -->
+        <!-- Mobile Navigation Menu -->
         <div id="mobileMenu" class="hidden md:hidden bg-slateDark border-t border-gray-800 px-4 pt-2 pb-4 space-y-2">
-            <a href="index.html" class="block py-2 text-sm text-warmGold">Home</a>
-            <a href="about.html" class="block py-2 text-sm hover:text-warmGold">About Us</a>
-            <a href="services.html" class="block py-2 text-sm hover:text-warmGold">Services</a>
-            <a href="portfolio.html" class="block py-2 text-sm hover:text-warmGold">Portfolio</a>
-            <a href="contact.html" class="block py-2 text-sm hover:text-warmGold">Contact Us</a>
+            <a href="index.html" class="block py-2 text-sm text-warmGold font-semibold">Home</a>
+            <a href="about.html" class="block py-2 text-sm hover:text-warmGold transition">About Us</a>
+            <a href="services.html" class="block py-2 text-sm hover:text-warmGold transition">Services</a>
+            <a href="portfolio.html" class="block py-2 text-sm hover:text-warmGold transition">Portfolio</a>
+            <a href="contact.html" class="block py-2 text-sm hover:text-warmGold transition">Contact Us</a>
             
             <div class="pt-2 border-t border-gray-700 flex flex-col gap-2">
                 <a href="tel:+923009490734" class="text-xs text-warmGold flex items-center gap-1">
@@ -140,7 +137,7 @@
         <!-- Services Preview Section -->
         <div class="max-w-7xl mx-auto py-16 px-4">
             <h2 class="font-serif text-3xl font-bold text-center text-charcoal mb-12">Core Design Expertise</h2>
-            <div class="grid md:grid-cols-4 gap-6">
+            <div class="grid sm:grid-cols-2 md:grid-cols-4 gap-6">
                 <div class="bg-softCream p-6 rounded shadow-sm border border-gray-200 text-center hover:shadow-md transition">
                     <i class="fa-solid fa-house-laptop text-3xl text-warmGold mb-4"></i>
                     <h3 class="font-serif font-bold text-xl mb-2">Interior Design</h3>
@@ -180,7 +177,7 @@
 
     <!-- Footer Section -->
     <footer class="bg-charcoal text-gray-400 text-xs py-12 border-t border-gray-800">
-        <div class="max-w-7xl mx-auto px-4 grid md:grid-cols-4 gap-8 mb-8">
+        <div class="max-w-7xl mx-auto px-4 grid sm:grid-cols-2 md:grid-cols-4 gap-8 mb-8">
             <div>
                 <h4 class="font-serif text-lg font-bold text-warmGold mb-3">FATIMA INTERIOR</h4>
                 <p class="leading-relaxed">Crafting high-end, luxury interior designs and functional architecture across Lahore, Pakistan.</p>
@@ -200,7 +197,6 @@
                 <p class="mb-2"><i class="fa-solid fa-location-dot text-warmGold mr-1"></i> 4 Mission Rd, Anarkali Bazar, Lahore, 54000</p>
                 <p class="mb-2"><i class="fa-solid fa-phone text-warmGold mr-1"></i> +92 300 9490734</p>
                 
-                <!-- Footer WhatsApp Button -->
                 <a href="https://wa.me/923009490734?text=Hello%20Fatima%20Interior,%20I%20want%20to%20inquire%20about%20your%20services." 
                    target="_blank" 
                    rel="noopener noreferrer" 
@@ -226,6 +222,28 @@
         </div>
     </footer>
 
-    <script src="js/main.js"></script>
+    <!-- Mobile Menu Toggle JavaScript -->
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            const btn = document.getElementById('mobileMenuBtn');
+            const menu = document.getElementById('mobileMenu');
+            const icon = document.getElementById('menuIcon');
+
+            if (btn && menu) {
+                btn.addEventListener('click', function () {
+                    menu.classList.toggle('hidden');
+                    
+                    // Icon Toggle between Hamburger and Close (X)
+                    if (menu.classList.contains('hidden')) {
+                        icon.classList.remove('fa-xmark');
+                        icon.classList.add('fa-bars');
+                    } else {
+                        icon.classList.remove('fa-bars');
+                        icon.classList.add('fa-xmark');
+                    }
+                });
+            }
+        });
+    </script>
 </body>
 </html>
